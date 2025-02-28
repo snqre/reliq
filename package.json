@@ -1,0 +1,24 @@
+{
+	"name": "reliq",
+	"description": "Reliq is a library for building",
+	"version": "2.4.5",
+	"license": "Apache-2.0",
+	"type": "module",
+	"types": "target/esm/mod.d.ts",
+	"main": "target/esm/mod.js",
+	"scripts": {
+		"build": "bun run script/build.ts",
+		"link": "bun run script/link.ts",
+		"blink": "bun run link && bun run build",
+		"publish:npm": "npm publish",
+		"publish:jsr": "npx jsr publish --allow-dirty --allow-slow-types"
+	},
+	"devDependencies": {
+		"@types/bun": "1.2.4",
+		"terser": "^5.39.0",
+		"tsup": "8.4.0"
+	},
+	"peerDependencies": {
+		"typescript": "5.7.3"
+	}
+}
